@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Concert One', cursive;
+}
+:root{
+    --color-botones-numeros: #424242;
+    --color-botones-operadores: #696969;
+    --color-letra: #e6e6e6;
+    --color-sombra-1: #1b1b1b;
+    --color-sombra-2: #636363;
+}
+
+
+
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1b1b1b;
+}
+
+
+
+.contenedor-calculadora {
+    background-color: #555555;
+    width: 400px;
+    height: 500px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    position: relative;
+}
+.contenedor-calculadora::after, .contenedor-calculadora::before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -4px;
+    left: -4px;
+    width: calc(100% + 8px);
+    height: calc(100% + 8px);
+    border-radius: 35px;
+    background: linear-gradient(45deg, #141414, #1b1b1b, #2e2e2e, #e1e1e1, #2e2e2e, #1b1b1b, #141414, #141414);
+    background-size: 400%;
+    animation: steam 30s linear infinite;
+}
+.contenedor-calculadora::after{
+    filter: blur(30px);
+}
+
+
+.calculadora-pantalla {
+    height: 30%;
+    display: flex;
+    align-items: center;
+    background: #9fdb50;
+    box-shadow: inset 1px 1px 8px 2px var(--color-sombra-1);
+    border-radius: 10px;
+}
+.pantalla {
+    margin-left: 15px;
+    border: none;
+    user-select: none;
+    background: transparent;
+    font-size: 30px;
+}
+
+
+.calculadora-botones {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-evenly;
+}
+.boton {
+    width: 90px;
+    height: 80px;
+    border-radius: 10px;
+    border: none;
+    color: var(--color-letra);
+    background: var(--color-botones-numeros);
+    box-shadow: 2px 2px 6px var(--color-sombra-1),  -2px -2px 6px var(--color-sombra-2);
+    font-size: 25px;
+    
+}
+.boton:active {
+    transform: scale(.95);  
+    box-shadow: inset 2px 2px 10px var(--color-sombra-1), inset -2px -2px 10px var(--color-sombra-2);
+}
+.operadores {
+    background-color: var(--color-botones-operadores);
+}
+.delete {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img {
+    filter: invert(1);
+    width: 20px;
+}
+
+
+
+@keyframes steam {
+    0% {
+      background-position: 0 0;
+    }
+  
+    50% {
+      background-position: 400% 0;
+    }
+  
+    100% {
+      background-position: 0 0;
+    }
+}

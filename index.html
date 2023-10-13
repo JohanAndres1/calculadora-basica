@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Calculadora.css">
+    <title>Calcuradora</title>
+</head>
+<body class="body">
+    <div class="contenedor-calculadora">
+        <div class="calculadora-pantalla">
+            <input class="pantalla" id="resultado" type="text" readonly>
+        </div>
+        <div class="calculadora-botones">
+            <button type="button" class="boton" value="1" id="1">1</button>
+            <button type="button" class="boton" value="2" id="2">2</button>
+            <button type="button" class="boton" value="3" id="3">3</button>
+            <button type="button" class="boton operadores delete" id="delete"><img class="img" src="Img/borrar.png"></button>
+            <button type="button" class="boton" value="4" id="4">4</button>
+            <button type="button" class="boton" value="5" id="5">5</button>
+            <button type="button" class="boton" value="6" id="6">6</button>
+            <button type="button" class="boton operadores" id="+">+</button>
+            <button type="button" class="boton" value="7" id="7">7</button>
+            <button type="button" class="boton" value="8" id="8">8</button>
+            <button type="button" class="boton" value="9" id="9">9</button>
+            <button type="button" class="boton operadores" id="-">-</button>
+            <button type="button" class="boton operadores" id="*">x</button>
+            <button type="button" class="boton" value="0" id="0">0</button>
+            <button type="button" class="boton operadores" id="/">/</button>
+            <button type="button" class="boton operadores" id="igual">=</button>
+        </div>
+    </div>
+    <script src="logica.js"></script>
+</body>
+</html>
